@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="col-sm-8 blog-main">
-        <a href="/posts/create"><b>Add New</b></a>
+        <a href="/posts/create"><b>{{trans('common.addnew', ['attribute'=>'Post'])}}</b></a>
         
         @foreach($posts as $post)
           @include('posts.post')

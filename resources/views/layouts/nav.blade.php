@@ -9,6 +9,9 @@
         
         @if(Auth::check())
             <a class="nav-link ml-auto" href="#">{{Auth::user()->name}}</a>
+            <a class="nav-link" href="/logout">Sign Out</a>
+        @else
+            <a class="nav-link ml-auto" href="/login">Sign In</a>
         @endif
         </nav>
     </div>

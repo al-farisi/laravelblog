@@ -12,7 +12,11 @@ use App\Task;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Route::get('/{locale}', function($locale){
+//     App::setLocale($locale);
+//     $posts = App\Post::latest()->get();
+//     return view('posts.index', compact('posts'));
+// }); 
 Route::get('/', 'PostsController@index')->name('home');
 Route::get('/posts/create', 'PostsController@create');
 Route::post('/posts', 'PostsController@store');
@@ -24,10 +28,14 @@ Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
 
 Route::get('/login', 'SessionsController@create');
+Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');
 
 
-
+Route::get('/test', function(){
+    echo Lang::get('pagination.next');
+    echo trans('pagination.next');
+});
 
 
 Route::get('/tasks', 'TasksController@index');
