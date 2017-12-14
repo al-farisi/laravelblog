@@ -18,10 +18,11 @@ use App\Task;
 //     return view('posts.index', compact('posts'));
 // }); 
 
-App::bind('App\Billing\Stripe', function() {
-    return \App\Billing\Stripe(config('services.stripe.secret'));
-});
+// App::singleton('App\Billing\Stripe', function() {
+//     return new \App\Billing\Stripe(config('services.stripe.secret'));
+// });
 
+//dd(resolve('App\Billing\Stripe'));
 
 Route::get('/', 'PostsController@index')->name('home');
 Route::get('/posts/create', 'PostsController@create');
