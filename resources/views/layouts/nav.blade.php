@@ -12,6 +12,7 @@
             <a class="nav-link" href="/logout">Sign Out</a>
         @else
             <a class="nav-link ml-auto" href="/login">Sign In</a>
+            <a class="nav-link" href="/register">Register</a>
         @endif
         </nav>
     </div>

@@ -1,5 +1,5 @@
 @component('mail::message')
-# Introduction
+# Welcome to Laravelblog, {{ $user->name }}
 
 Thanks so much for registering!
 
